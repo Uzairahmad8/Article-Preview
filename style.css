@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #ecf2f8;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding: 0 24px;
+  /* border: 2px solid black; */
+  margin: 100px auto;
+}
+
+.mainContainer {
+  max-width: 748px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 445px;
+  background-color: #ffffff;
+  padding: 32px 40px 32px 40px;
+}
+
+/* not a good practise */
+/* .container_width {
+  max-width: 365px;
+} */
+
+.Content_main-data {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Content_secondary-data {
+  font-size: 13px;
+  line-height: 20px;
+  word-spacing: 0.12px;
+  margin: 12px auto 20px auto;
+}
+
+.imageContainer {
+  max-width: 285px;
+}
+
+.image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user_img {
+  gap: 16px;
+  align-items: center;
+  justify-self: flex-start;
+}
+
+.user_review {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 330px;
+}
+
+@media (max-width: 783px) {
+  .imageContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .content {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .Content_main-data {
+    font-size: 16px;
+  }
+}
+
+.userDataBox {
+  background-color: #48556a;
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 9px 13px;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.fa-share {
+  cursor: pointer;
+}
+
+.userDataBox input {
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.userDataBox input:checked + .socialLinks {
+  display: block;
+}
+
+.socialLinks {
+  position: absolute;
+  right: -103px;
+  bottom: 48px;
+  display: none;
+}
+
+.shareHover {
+  background-color: #48556a;
+  padding: 18px 35px;
+  justify-content: space-around;
+  max-width: 245px;
+  margin: 18px auto;
+  gap: 21px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.shareHover::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid #48556a;
+  position: absolute;
+  bottom: -19px;
+  left: 105px;
+}
+
+.share {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  opacity: 0.5;
+}
+
+.socialLogo {
+  gap: 16px;
+}
+
+.logo {
+  color: white;
+}
